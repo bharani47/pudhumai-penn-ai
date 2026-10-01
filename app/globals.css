@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Remove default body margin & set clean background */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  /* Dark background matches our voice-UI palette */
+  background-color: #030712; /* gray-950 */
+}
+
+/* ── Custom mic-pulse animation ── */
+@keyframes mic-pulse {
+  0%   { box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.7); }
+  70%  { box-shadow: 0 0 0 20px rgba(239, 68, 68, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(239, 68, 68, 0); }
+}
+
+.animate-mic-pulse {
+  animation: mic-pulse 1.4s ease-out infinite;
+}
